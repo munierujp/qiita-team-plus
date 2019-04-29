@@ -15,7 +15,8 @@
     "dev:firefox": "gulp --watch --vendor=firefox",
     "dev:opera": "gulp --watch --vendor=opera",
     "dev:edge": "gulp --watch --vendor=edge",
-    "lint": "standard"
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "fix": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "standard": {
     "globals": [
@@ -31,6 +32,12 @@
     "chromereload": "0.x.x",
     "debounce": "1.x.x",
     "del": "3.x.x",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "gulp": "3.x.x",
     "gulp-bump": "2.x.x",
     "gulp-cache": "0.x.x",
