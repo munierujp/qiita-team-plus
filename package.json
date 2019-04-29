@@ -17,7 +17,8 @@
     "dev:edge": "gulp --watch --vendor=edge",
     "lint:js": "eslint --ext .js --ignore-path .gitignore .",
     "lint:css": "stylelint --ignore-path .gitignore '**/*.{css,scss}'",
-    "fix:js": "eslint --fix --ext .js --ignore-path .gitignore ."
+    "fix:js": "eslint --fix --ext .js --ignore-path .gitignore .",
+    "fix:css": "stylelint --fix --ignore-path .gitignore '**/*.{css,scss}'"
   },
   "standard": {
     "globals": [
