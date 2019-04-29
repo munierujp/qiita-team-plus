@@ -16,7 +16,7 @@
     "dev:opera": "gulp --watch --vendor=opera",
     "dev:edge": "gulp --watch --vendor=edge",
     "lint:js": "eslint --ext .js --ignore-path .gitignore .",
-    "fix": "eslint --fix --ext .js --ignore-path .gitignore ."
+    "fix:js": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "standard": {
     "globals": [
