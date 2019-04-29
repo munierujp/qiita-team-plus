@@ -18,6 +18,7 @@
     "lint": "npm-run-all -p lint:*",
     "lint:js": "eslint --ext .js --ignore-path .gitignore .",
     "lint:css": "stylelint --ignore-path .gitignore '**/*.{css,scss}'",
+    "fix": "npm-run-all -p fix:*",
     "fix:js": "eslint --fix --ext .js --ignore-path .gitignore .",
     "fix:css": "stylelint --fix --ignore-path .gitignore '**/*.{css,scss}'"
   },
