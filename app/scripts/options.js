@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     new Vue({
       el: '#app',
       data: () => ({
-        status: ''
+        status: '',
+        auto_enable_sync_scroll: config.auto_enable_sync_scroll
       }),
       computed: {
         config () {
           return {
+            auto_enable_sync_scroll: this.auto_enable_sync_scroll
           }
         }
       },

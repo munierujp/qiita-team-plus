@@ -8,6 +8,16 @@
 
 <body>
   <div id="app">
+    <h2>記事編集画面</h2>
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          v-model="auto_enable_sync_scroll"
+          @input="onUpdate">
+        <span>同時スクロールを自動的に有効化</span>
+      </label>
+    </div>
     <div>
       <button @click="save">保存</button>
       <span
