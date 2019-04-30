@@ -5,6 +5,17 @@
   "version": "0.0.0",
   "manifest_version": 2,
   "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.qiita.com/*"
+      ],
+      "js": [
+        "scripts/contentsscript.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
