@@ -28,6 +28,7 @@
     ]
   },
   "devDependencies": {
+    "@munierujp/val": "^1.0.0",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
     "babel-loader": "7.x.x",
@@ -67,6 +68,7 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.6.0",
     "vinyl-named": "1.x.x",
+    "vue": "^2.6.10",
     "webpack": "3.x.x",
     "webpack-stream": "3.x.x",
     "yargs": "^8.x.x"
