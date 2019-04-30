@@ -1,3 +1,4 @@
 export default {
-  editArticle: `^/drafts/.+$`
+  editPastArticle: `^/drafts/.+/edit$`,
+  postNewArticle: `^/drafts/new$`
 }
