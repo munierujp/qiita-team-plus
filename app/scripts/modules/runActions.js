@@ -7,7 +7,7 @@ export default function () {
   actions.forEach(action => {
     fetchConfigOrDefault(action.key).then(enabled => {
       if (enabled) {
-        console.log(`Run action "${action.name}"`)
+        console.log(`アクション「${action.name}」を実行します。`)
         action.run()
       }
     })
