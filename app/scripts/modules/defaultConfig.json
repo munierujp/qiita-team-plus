@@ -1,3 +1,4 @@
 {
-  "auto_enable_sync_scroll": true
+  "auto_enable_sync_scroll": true,
+  "fix_header": true
 }

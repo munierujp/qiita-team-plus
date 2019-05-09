@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '#app',
       data: () => ({
         status: '',
-        auto_enable_sync_scroll: config.auto_enable_sync_scroll
+        auto_enable_sync_scroll: config.auto_enable_sync_scroll,
+        fix_header: config.fix_header
       }),
       computed: {
         config () {
           return {
-            auto_enable_sync_scroll: this.auto_enable_sync_scroll
+            auto_enable_sync_scroll: this.auto_enable_sync_scroll,
+            fix_header: this.fix_header
           }
         }
       },

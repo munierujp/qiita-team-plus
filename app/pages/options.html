@@ -8,6 +8,16 @@
 
 <body>
   <div id="app">
+    <h2>すべての画面</h2>
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          v-model="fix_header"
+          @input="onUpdate">
+        <span>ヘッダーを固定</span>
+      </label>
+    </div>
     <h2>記事編集画面</h2>
     <div>
       <label>
