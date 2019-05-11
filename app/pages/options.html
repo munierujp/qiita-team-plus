@@ -10,23 +10,17 @@
   <div id="app">
     <h2>すべての画面</h2>
     <div>
-      <label>
-        <input
-          type="checkbox"
-          v-model="fix_header"
-          @input="onUpdate">
-        <span>ヘッダーを固定</span>
-      </label>
+      <app-checkbox
+        v-model="fixHeader.value"
+        :label="fixHeader.label"
+        @input="onUpdate"></app-checkbox>
     </div>
     <h2>記事編集画面</h2>
     <div>
-      <label>
-        <input
-          type="checkbox"
-          v-model="auto_enable_sync_scroll"
-          @input="onUpdate">
-        <span>同時スクロールを自動的に有効化</span>
-      </label>
+      <app-checkbox
+        v-model="autoEnableSyncScroll.value"
+        :label="autoEnableSyncScroll.label"
+        @input="onUpdate"></app-checkbox>
     </div>
     <div>
       <button @click="save">保存</button>

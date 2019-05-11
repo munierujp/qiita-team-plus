@@ -1,22 +1,31 @@
 import Vue from 'vue'
 import Storage from './modules/Storage'
 import defaultConfig from './modules/defaultConfig'
+import actions from './modules/actions'
+import AppCheckbox from './components/AppCheckbox'
+
+const { autoEnableSyncScroll, fixHeader } = actions
 
 document.addEventListener('DOMContentLoaded', () => {
   Storage.fetch(defaultConfig).then(config => {
+    const toData = action => ({
+      value: config[action.key],
+      label: action.name
+    })
+
     /* eslint-disable no-new */
     new Vue({
       el: '#app',
       data: () => ({
         status: '',
-        auto_enable_sync_scroll: config.auto_enable_sync_scroll,
-        fix_header: config.fix_header
+        autoEnableSyncScroll: toData(autoEnableSyncScroll),
+        fixHeader: toData(fixHeader)
       }),
       computed: {
         config () {
           return {
-            auto_enable_sync_scroll: this.auto_enable_sync_scroll,
-            fix_header: this.fix_header
+            [autoEnableSyncScroll.key]: this.autoEnableSyncScroll.value,
+            [fixHeader.key]: this.fixHeader.value
           }
         }
       },
@@ -29,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             this.status = '保存しました。'
           })
         }
+      },
+      components: {
+        AppCheckbox
       }
     })
   })
