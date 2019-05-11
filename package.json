@@ -20,7 +20,10 @@
     "lint:css": "stylelint --ignore-path .gitignore '**/*.{css,scss}'",
     "fix": "npm-run-all -p fix:*",
     "fix:js": "eslint --fix --ext .js --ignore-path .gitignore .",
-    "fix:css": "stylelint --fix --ignore-path .gitignore '**/*.{css,scss}'"
+    "fix:css": "stylelint --fix --ignore-path .gitignore '**/*.{css,scss}'",
+    "release:major": "gulp release",
+    "release:minor": "gulp feature",
+    "release:patch": "gulp patch"
   },
   "standard": {
     "globals": [
