@@ -4,7 +4,11 @@ import defaultConfig from './modules/defaultConfig'
 import actions from './modules/actions'
 import AppCheckbox from './components/AppCheckbox'
 
-const { autoEnableSyncScroll, fixHeader } = actions
+const {
+  addStockButtonToHeader,
+  autoEnableSyncScroll,
+  fixHeader
+} = actions
 
 document.addEventListener('DOMContentLoaded', () => {
   Storage.fetch(defaultConfig).then(config => {
@@ -18,12 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '#app',
       data: () => ({
         status: '',
+        addStockButtonToHeader: toData(addStockButtonToHeader),
         autoEnableSyncScroll: toData(autoEnableSyncScroll),
         fixHeader: toData(fixHeader)
       }),
       computed: {
         config () {
           return {
+            [addStockButtonToHeader.key]: this.addStockButtonToHeader.value,
             [autoEnableSyncScroll.key]: this.autoEnableSyncScroll.value,
             [fixHeader.key]: this.fixHeader.value
           }

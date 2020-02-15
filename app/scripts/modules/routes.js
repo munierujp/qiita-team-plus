@@ -5,6 +5,7 @@ export default [
   {
     path: paths.all,
     actions: [
+      actions.addStockButtonToHeader,
       actions.fixHeader
     ]
   },

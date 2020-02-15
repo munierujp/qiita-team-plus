@@ -1,0 +1,12 @@
+[data-qiita-team-plus="header-stock"] {
+  float: left;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-right: 12px;
+}
+
+@media (max-width: 767px) {
+  [data-qiita-team-plus="header-stock-button-text"] {
+    display: none;
+  }
+}

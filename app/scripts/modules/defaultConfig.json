@@ -1,4 +1,5 @@
 {
+  "add_stock_button_to_header": true,
   "auto_enable_sync_scroll": true,
   "fix_header": true
 }

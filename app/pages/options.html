@@ -11,6 +11,12 @@
     <h2>すべての画面</h2>
     <div>
       <app-checkbox
+        v-model="addStockButtonToHeader.value"
+        :label="addStockButtonToHeader.label"
+        @input="onUpdate"></app-checkbox>
+    </div>
+    <div>
+      <app-checkbox
         v-model="fixHeader.value"
         :label="fixHeader.label"
         @input="onUpdate"></app-checkbox>
