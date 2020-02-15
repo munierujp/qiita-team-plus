@@ -1,4 +1,10 @@
-[data-qiita-team-plus="header-stock"] {
+[data-qiita-team-plus-fix-header="header"] {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+[data-qiita-team-plus-add-stock-button-to-header="header-stock"] {
   float: left;
   font-size: 14px;
   margin-top: 8px;
@@ -6,7 +12,7 @@
 }
 
 @media (max-width: 767px) {
-  [data-qiita-team-plus="header-stock-button-text"] {
+  [data-qiita-team-plus-add-stock-button-to-header="header-stock-button-text"] {
     display: none;
   }
 }

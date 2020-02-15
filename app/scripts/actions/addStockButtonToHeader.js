@@ -14,24 +14,28 @@ function addStockButtonToHeader () {
 
 function createStockButtonElement ({ userId }) {
   const stockButtonIcon = document.createElement('i')
-  stockButtonIcon.setAttribute('data-qiita-team-plus', 'header-stock-button-icon')
+  addSelector(stockButtonIcon, 'header-stock-button-icon')
   stockButtonIcon.setAttribute('class', 'fa fa-fw fa-folder-open')
 
   const stockButtonText = document.createElement('span')
-  stockButtonText.setAttribute('data-qiita-team-plus', 'header-stock-button-text')
+  addSelector(stockButtonText, 'header-stock-button-text')
   stockButtonText.textContent = 'ストック一覧'
 
   const stockButtonLink = document.createElement('a')
-  stockButtonLink.setAttribute('data-qiita-team-plus', 'header-stock-button')
+  addSelector(stockButtonLink, 'header-stock-button')
   stockButtonLink.setAttribute('href', `/${userId}/stocks`)
   stockButtonLink.appendChild(stockButtonIcon)
   stockButtonLink.appendChild(stockButtonText)
 
   const stockButton = document.createElement('div')
-  stockButton.setAttribute('data-qiita-team-plus', 'header-stock')
+  addSelector(stockButton, 'header-stock')
   stockButton.appendChild(stockButtonLink)
 
   return stockButton
+}
+
+function addSelector (element, selector) {
+  element.setAttribute('data-qiita-team-plus-add-stock-button-to-header', selector)
 }
 
 export default addStockButtonToHeader
