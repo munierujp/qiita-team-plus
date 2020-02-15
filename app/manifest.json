@@ -35,7 +35,8 @@
     "default_title": "__MSG_browserActionTitle__"
   },
   "permissions":[
-    "storage"
+    "storage",
+    "*://*.qiita.com/*"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
