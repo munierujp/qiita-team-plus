@@ -1,4 +1,4 @@
-import Val from '@munierujp/val'
+import Val from '@js-commons/val'
 import fetchConfigOrDefault from './fetchConfigOrDefault'
 import routes from './routes'
 
