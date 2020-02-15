@@ -17,6 +17,9 @@
       "js": [
         "scripts/contentsscript.js"
       ],
+      "css": [
+        "styles/contentsscript.css"
+      ],
       "run_at": "document_end"
     }
   ],

@@ -1,3 +1,5 @@
+import getHeaderElements from '../modules/getHeaderElements'
+
 export default function () {
   const headers = getHeaderElements()
   headers.forEach(header => {
@@ -5,8 +7,4 @@ export default function () {
     header.style.top = '0'
     header.style.zIndex = '999'
   })
-}
-
-function getHeaderElements () {
-  return Array.from(document.getElementsByClassName('headerContainer'))
 }

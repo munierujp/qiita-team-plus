@@ -4,13 +4,12 @@ import defaultConfig from './modules/defaultConfig'
 import actions from './modules/actions'
 import AppCheckbox from './components/AppCheckbox'
 
-const { autoEnableSyncScroll, fixHeader } = actions
-
 document.addEventListener('DOMContentLoaded', () => {
   Storage.fetch(defaultConfig).then(config => {
-    const toData = action => ({
-      value: config[action.key],
-      label: action.name
+    const toData = ({ key, name }) => ({
+      key,
+      value: config[key],
+      name
     })
 
     /* eslint-disable no-new */
@@ -18,15 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '#app',
       data: () => ({
         status: '',
-        autoEnableSyncScroll: toData(autoEnableSyncScroll),
-        fixHeader: toData(fixHeader)
+        actions: {
+          addStockButtonToHeader: toData(actions.addStockButtonToHeader),
+          autoEnableSyncScroll: toData(actions.autoEnableSyncScroll),
+          fixHeader: toData(actions.fixHeader)
+        }
       }),
       computed: {
         config () {
-          return {
-            [autoEnableSyncScroll.key]: this.autoEnableSyncScroll.value,
-            [fixHeader.key]: this.fixHeader.value
-          }
+          const config = {}
+          Object.values(this.actions).forEach(action => {
+            config[action.key] = action.value
+          })
+          return config
         }
       },
       methods: {
