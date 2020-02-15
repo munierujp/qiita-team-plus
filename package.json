@@ -1,7 +1,7 @@
 {
   "name": "qiita-team-plus",
   "private": true,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Add useful features to Qiita Team.",
   "scripts": {
     "start": "npm run dev:chrome",
