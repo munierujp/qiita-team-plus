@@ -1,23 +1,15 @@
-import Val from '@js-commons/val'
+import getActions from './getActions'
 import fetchConfigOrDefault from './fetchConfigOrDefault'
-import routes from './routes'
 
 export default function () {
-  const actions = findActions(window.location)
+  const actions = getActions(window.location.pathname)
   actions.forEach(action => {
-    fetchConfigOrDefault(action.key).then(enabled => {
-      if (enabled) {
-        console.log(`アクション「${action.name}」を実行します。`)
-        action.run()
-      }
-    })
+    fetchConfigOrDefault(action.key)
+      .then(enabled => {
+        if (enabled) {
+          console.log(`アクション「${action.name}」を実行します。`)
+          action.run()
+        }
+      })
   })
-}
-
-function findActions (location) {
-  return Val.of(location)
-    .map(location => location.pathname)
-    .map(path => routes.filter(route => path.match(route.path)))
-    .map(routes => routes.flatMap(route => route.actions))
-    .or([])
 }
