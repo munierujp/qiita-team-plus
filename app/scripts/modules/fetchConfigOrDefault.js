@@ -1,9 +1,16 @@
-import Val from '@js-commons/val'
 import Storage from './Storage'
 import defaultConfig from './defaultConfig'
 
-export default function (key) {
-  return Storage.fetch(key).then(items => {
-    return Val.of(items[key]).or(defaultConfig[key])
-  })
+function fetchConfigOrDefault (key) {
+  return Storage.fetch(key)
+    .then(items => {
+      const item = items[key]
+      if (item !== undefined) {
+        return item
+      } else {
+        return defaultConfig[key]
+      }
+    })
 }
+
+export default fetchConfigOrDefault
