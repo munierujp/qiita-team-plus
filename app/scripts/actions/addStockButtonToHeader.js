@@ -3,13 +3,14 @@ import getHeaderElements from '../modules/getHeaderElements'
 
 function addStockButtonToHeader () {
   const userId = getCurrentUserId()
+  const stockButton = createStockButtonElement({ userId })
   const headers = getHeaderElements()
-  headers.forEach(header => {
-    const stockButton = createStockButtonElement({ userId })
-    const sharedHeaderRight = header.querySelector('.sharedHeader_right')
-    const newItemButton = header.querySelector('.sharedHeader_newItem')
-    sharedHeaderRight.insertBefore(stockButton, newItemButton)
-  })
+  headers
+    .map(header => header.querySelector('.sharedHeader_right'))
+    .forEach(sharedHeaderRight => {
+      const leftestButton = sharedHeaderRight.querySelector('.sharedHeader_newItem') || sharedHeaderRight.querySelector('.sharedHeader_notifications')
+      sharedHeaderRight.insertBefore(stockButton, leftestButton)
+    })
 }
 
 function createStockButtonElement ({ userId }) {
