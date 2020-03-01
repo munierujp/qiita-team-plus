@@ -4,10 +4,10 @@ import { ArticlePage } from '../pages'
 const MIN_YEAR = 1
 
 function addOldArticleAlert () {
-  const now = new Date()
   const articlePage = new ArticlePage(document)
   const article = articlePage.getArticleElement()
   const updatedDate = article.getUpdatedDate()
+  const now = new Date()
   const year = differenceInYears(now, updatedDate)
   if (year >= MIN_YEAR) {
     const alert = createAlertElement({ year })
