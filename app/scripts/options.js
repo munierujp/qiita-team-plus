@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data: () => ({
         status: '',
         actions: {
+          addOldArticleAlert: toData(actions.addOldArticleAlert),
           addStockButtonToHeader: toData(actions.addStockButtonToHeader),
           autoEnableSyncScroll: toData(actions.autoEnableSyncScroll),
           fixHeader: toData(actions.fixHeader)

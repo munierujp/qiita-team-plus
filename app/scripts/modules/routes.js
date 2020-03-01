@@ -10,6 +10,12 @@ export default [
     ]
   },
   {
+    path: paths.article,
+    actions: [
+      actions.addOldArticleAlert
+    ]
+  },
+  {
     path: paths.editPastArticle,
     actions: [
       actions.autoEnableSyncScroll

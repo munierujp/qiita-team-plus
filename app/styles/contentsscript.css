@@ -1,3 +1,51 @@
+[data-qiita-team-plus-add-old-article-alert="alert-one"] {
+  background-color: #fff3cd;
+  color: #856404;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 40px;
+  padding: 16px;
+}
+
+[data-qiita-team-plus-add-old-article-alert="alert-three"] {
+  background-color: #ffe79a;
+  color: #533f03;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 40px;
+  padding: 16px;
+}
+
+[data-qiita-team-plus-add-old-article-alert="alert-five"] {
+  background-color: #ffdb67;
+  color: #221a01;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 40px;
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  [data-qiita-team-plus-add-old-article-alert="alert-one"] {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  [data-qiita-team-plus-add-old-article-alert="alert-three"] {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  [data-qiita-team-plus-add-old-article-alert="alert-five"] {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+[data-qiita-team-plus-add-old-article-alert="alert-icon"] {
+  margin-right: 8px;
+}
+
 [data-qiita-team-plus-fix-header="header"] {
   position: sticky;
   top: 0;
