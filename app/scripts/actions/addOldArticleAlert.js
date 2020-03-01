@@ -34,12 +34,12 @@ function createAlertElement ({ year }) {
 }
 
 function toRange (year) {
-  if (year <= 1) {
-    return 'one'
+  if (year >= 5) {
+    return 'five'
   } else if (year <= 3) {
     return 'three'
   }
-  return 'five'
+  return 'one'
 }
 
 function addSelector (element, selector) {
