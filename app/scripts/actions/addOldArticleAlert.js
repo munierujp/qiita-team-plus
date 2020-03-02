@@ -1,7 +1,7 @@
 import { differenceInYears } from 'date-fns'
 import { ArticlePage } from '../pages'
 
-const MIN_YEAR = 0
+const MIN_YEAR = 1
 
 function addOldArticleAlert () {
   const articlePage = new ArticlePage(document)
