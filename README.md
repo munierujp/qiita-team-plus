@@ -3,7 +3,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 # Qiita Team Plus
-<img src=".doc/banner_1280x800.png" alt="CYBER XEED PLUS" width="500">
+<img src=".doc/banner_1280x800.png" width="500">
 
 Qiita Teamに便利な機能を追加するChrome拡張
 
