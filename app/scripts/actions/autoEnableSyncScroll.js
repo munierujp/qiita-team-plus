@@ -1,5 +1,8 @@
+import { EditArticlePage } from '../pages'
+
 export default function () {
-  const checkbox = document.getElementById('draft_item[syncScroll]')
+  const editArticlePage = new EditArticlePage(document)
+  const checkbox = editArticlePage.getSyncScrollCheckboxElement()
   if (!checkbox.checked) {
     checkbox.click()
   }
