@@ -1,6 +1,16 @@
+import paths from '../paths'
 import { CommonPage } from '../pages'
 
-function addStockButtonToHeader () {
+export default {
+  key: 'add_stock_button_to_header',
+  name: 'ヘッダーにストックボタンを追加',
+  routes: [
+    paths.all
+  ],
+  run
+}
+
+function run () {
   const page = new CommonPage(document)
   const userId = page.getCurrentUserId()
   const stockButton = createStockButtonElement({ userId })
@@ -35,5 +45,3 @@ function createStockButtonElement ({ userId }) {
 function addSelector (element, selector) {
   element.setAttribute('data-qiita-team-plus-add-stock-button-to-header', selector)
 }
-
-export default addStockButtonToHeader

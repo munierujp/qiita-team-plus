@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import Storage from './modules/Storage'
-import defaultConfig from './modules/defaultConfig'
-import actions from './modules/actions'
+import Storage from './Storage'
+import defaultConfig from './defaultConfig'
+import actions from './actions'
 import AppCheckbox from './components/AppCheckbox'
 
 document.addEventListener('DOMContentLoaded', () => {
