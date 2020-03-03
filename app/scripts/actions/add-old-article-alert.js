@@ -1,9 +1,19 @@
-import { differenceInYears } from 'date-fns'
+import paths from '../paths'
 import { ArticlePage } from '../pages'
+import { differenceInYears } from 'date-fns'
 
 const MIN_YEAR = 1
 
-function addOldArticleAlert () {
+export default {
+  key: 'add_old_article_alert',
+  name: '古い記事にアラートを表示',
+  routes: [
+    paths.article
+  ],
+  run
+}
+
+function run () {
   const page = new ArticlePage(document)
   const article = page.getArticleElement()
   const updatedDate = article.getUpdatedDate()
@@ -45,5 +55,3 @@ function toRange (year) {
 function addSelector (element, selector) {
   element.setAttribute('data-qiita-team-plus-add-old-article-alert', selector)
 }
-
-export default addOldArticleAlert
