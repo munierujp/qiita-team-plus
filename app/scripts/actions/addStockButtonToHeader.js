@@ -1,16 +1,13 @@
-import getCurrentUserId from '../modules/getCurrentUserId'
-import getHeaderElements from '../modules/getHeaderElements'
+import { CommonPage } from '../pages'
 
 function addStockButtonToHeader () {
-  const userId = getCurrentUserId()
+  const page = new CommonPage(document)
+  const userId = page.getCurrentUserId()
   const stockButton = createStockButtonElement({ userId })
-  const headers = getHeaderElements()
-  headers
-    .map(header => header.querySelector('.sharedHeader_right'))
-    .forEach(sharedHeaderRight => {
-      const leftestButton = sharedHeaderRight.querySelector('.sharedHeader_newItem') || sharedHeaderRight.querySelector('.sharedHeader_notifications')
-      sharedHeaderRight.insertBefore(stockButton, leftestButton)
-    })
+  const header = page.getHeaderElement()
+  const sharedHeaderRight = header.querySelector('.sharedHeader_right')
+  const leftestButton = sharedHeaderRight.querySelector('.sharedHeader_newItem') || sharedHeaderRight.querySelector('.sharedHeader_notifications')
+  sharedHeaderRight.insertBefore(stockButton, leftestButton)
 }
 
 function createStockButtonElement ({ userId }) {
