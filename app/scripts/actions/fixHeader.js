@@ -1,8 +1,7 @@
-import getHeaderElements from '../modules/getHeaderElements'
+import { CommonPage } from '../pages'
 
 export default function () {
-  const headers = getHeaderElements()
-  headers.forEach(header => {
-    header.setAttribute('data-qiita-team-plus-fix-header', 'header')
-  })
+  const page = new CommonPage(document)
+  const header = page.getHeaderElement()
+  header.setAttribute('data-qiita-team-plus-fix-header', 'header')
 }
