@@ -29,3 +29,6 @@ Qiita Teamに便利な機能を追加するChrome拡張
 ### 記事編集画面
 #### 同時スクロールを自動的に有効化
 <img src=".doc/screenshots/auto_enable_sync_scroll.png" width="500">
+
+## How to contribute
+[CONTRIBUTING.md](.github/CONTRIBUTING.md)を参照してください。
