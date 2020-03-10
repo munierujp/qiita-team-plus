@@ -11,7 +11,7 @@
   routes: [
     paths.all
   ],
-  run: () => {
+  run: (config) => {
     const page = new CommonPage(document)
     const header = page.getHeaderElement()
     header.setAttribute('data-qiita-team-plus-fix-header', 'header')
@@ -127,7 +127,7 @@ export default {
   routes: [
     paths.all
   ],
-  run: () => {
+  run: (config) => {
     const page = new CommonPage(document)
     const header = page.getHeaderElement()
     header.setAttribute('data-qiita-team-plus-fix-header', 'header')
@@ -144,6 +144,16 @@ import fixHeader from './fix-header'
 
 export default {
   fixHeader
+}
+```
+
+#### 設定
+`run`関数は、引数で`config`を受け取ります。  
+`config`には、アクション実行時の設定が以下のようなオブジェクト形式で格納されています。
+
+```js
+{
+  fix_header: true
 }
 ```
 

@@ -10,18 +10,16 @@ export default {
   routes: [
     paths.article
   ],
-  run
-}
-
-function run () {
-  const page = new ArticlePage(document)
-  const article = page.getArticleElement()
-  const updatedDate = article.getUpdatedDate()
-  const now = new Date()
-  const year = differenceInYears(now, updatedDate)
-  if (year >= MIN_YEAR) {
-    const alert = createAlertElement({ year })
-    article.insertBeforeBody(alert)
+  run: (config) => {
+    const page = new ArticlePage(document)
+    const article = page.getArticleElement()
+    const updatedDate = article.getUpdatedDate()
+    const now = new Date()
+    const year = differenceInYears(now, updatedDate)
+    if (year >= MIN_YEAR) {
+      const alert = createAlertElement({ year })
+      article.insertBeforeBody(alert)
+    }
   }
 }
 
