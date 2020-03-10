@@ -6,7 +6,8 @@ class EditArticlePage {
   }
 
   getSyncScrollCheckboxElement () {
-    return SyncScrollCheckboxElement.from(this.document)
+    const element = this.document.getElementById('draft_item[syncScroll]')
+    return new SyncScrollCheckboxElement(element)
   }
 }
 
