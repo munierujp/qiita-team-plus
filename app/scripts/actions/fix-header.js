@@ -7,11 +7,9 @@ export default {
   routes: [
     paths.all
   ],
-  run
-}
-
-function run () {
-  const page = new CommonPage(document)
-  const header = page.getHeaderElement()
-  header.setAttribute('data-qiita-team-plus-fix-header', 'header')
+  run: (config) => {
+    const page = new CommonPage(document)
+    const header = page.getHeaderElement()
+    header.setAttribute('data-qiita-team-plus-fix-header', 'header')
+  }
 }

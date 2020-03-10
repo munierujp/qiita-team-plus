@@ -8,13 +8,11 @@ export default {
     paths.editPastArticle,
     paths.postNewArticle
   ],
-  run
-}
-
-function run () {
-  const page = new EditArticlePage(document)
-  const checkbox = page.getSyncScrollCheckboxElement()
-  if (!checkbox.checked) {
-    checkbox.click()
+  run: (config) => {
+    const page = new EditArticlePage(document)
+    const checkbox = page.getSyncScrollCheckboxElement()
+    if (!checkbox.checked) {
+      checkbox.click()
+    }
   }
 }

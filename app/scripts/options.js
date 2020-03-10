@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Storage from './Storage'
-import defaultConfig from './defaultConfig'
+import fetchConfig from './fetchConfig'
 import actions from './actions'
 import createObjectFromEntries from './modules/createObjectFromEntries'
 import AppCheckbox from './components/AppCheckbox'
 
 document.addEventListener('DOMContentLoaded', () => {
-  Storage.fetch(defaultConfig).then(config => {
+  fetchConfig().then(config => {
     /* eslint-disable no-new */
     new Vue({
       el: '#app',
