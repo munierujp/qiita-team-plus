@@ -38,7 +38,8 @@ class CommonPage {
   }
 
   getHeaderElement () {
-    return HeaderElement.from(this.document)
+    const element = this.document.querySelector('.headerContainer')
+    return new HeaderElement(element)
   }
 }
 ```
@@ -51,11 +52,6 @@ class CommonPage {
 class HeaderElement {
   constructor (element) {
     this.element = element
-  }
-
-  static from (document) {
-    const element = document.querySelector('.headerContainer')
-    return new HeaderElement(element)
   }
 
   setAttribute (name, value) {
@@ -93,7 +89,8 @@ class CommonPage {
   }
 
   getHeaderElement () {
-    return HeaderElement.from(this.document)
+    const element = this.document.querySelector('.headerContainer')
+    return new HeaderElement(element)
   }
 }
 
