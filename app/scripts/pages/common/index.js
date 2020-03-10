@@ -16,7 +16,8 @@ class CommonPage {
   }
 
   getHeaderElement () {
-    return HeaderElement.from(this.document)
+    const element = this.document.querySelector('.headerContainer')
+    return new HeaderElement(element)
   }
 }
 
