@@ -6,7 +6,8 @@ class ArticlePage {
   }
 
   getArticleElement () {
-    return ArticleElement.from(this.document)
+    const element = this.document.querySelector('.teamArticle')
+    return new ArticleElement(element)
   }
 }
 

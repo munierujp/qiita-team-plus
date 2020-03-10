@@ -5,11 +5,6 @@ class ArticleElement {
     this.element = element
   }
 
-  static from (document) {
-    const element = document.querySelector('.teamArticle')
-    return new ArticleElement(element)
-  }
-
   getBodyHTMLElement () {
     return this.element.querySelector('.teamArticle_body')
   }
