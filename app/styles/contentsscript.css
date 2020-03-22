@@ -64,3 +64,21 @@
     display: none;
   }
 }
+
+[data-qiita-team-plus-foldable-comments="comment-toggle"] {
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+[data-qiita-team-plus-foldable-comments="comment-icon"] {
+  margin-right: 8px;
+}
+
+[data-qiita-team-plus-foldable-comments="comment-label"] {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.qiita-team-plus-foldable-comments-hide {
+  display: none;
+}
