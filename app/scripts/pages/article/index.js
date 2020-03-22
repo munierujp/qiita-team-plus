@@ -1,4 +1,4 @@
-import { ArticleElement } from './elements'
+import { ArticleElement, CommentListElement } from './elements'
 
 class ArticlePage {
   constructor (document) {
@@ -8,6 +8,11 @@ class ArticlePage {
   getArticleElement () {
     const element = this.document.querySelector('.teamArticle')
     return new ArticleElement(element)
+  }
+
+  getCommentListElement () {
+    const element = this.document.querySelector('.commentList')
+    return new CommentListElement(element)
   }
 }
 
