@@ -28,6 +28,12 @@
         :label="actions.add_old_article_alert.name"
         @input="onUpdate"></app-checkbox>
     </div>
+    <div>
+      <app-checkbox
+        v-model="actions.foldable_comments.value"
+        :label="actions.foldable_comments.name"
+        @input="onUpdate"></app-checkbox>
+    </div>
     <h2>記事編集画面</h2>
     <div>
       <app-checkbox
