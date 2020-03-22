@@ -26,6 +26,9 @@ Qiita Teamに便利な機能を追加するChrome拡張
 #### 古い記事にアラートを表示
 <img src=".doc/screenshots/add_old_article_alert.png" width="500">
 
+#### コメント欄を折りたたむ
+<img src=".doc/screenshots/foldable_comments.png" width="500">
+
 ### 記事編集画面
 #### 同時スクロールを自動的に有効化
 <img src=".doc/screenshots/auto_enable_sync_scroll.png" width="500">
