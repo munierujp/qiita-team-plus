@@ -11,7 +11,7 @@ export default {
   routes: [
     paths.article
   ],
-  run: (config) => {
+  run: () => {
     const page = new ArticlePage(document)
     const commentList = page.getCommentListElement()
     const comments = commentList.getCommentElements()
