@@ -200,3 +200,37 @@ DOM操作は直接記述してもかまいませんが、定義済みのペー�
   <script src="../scripts/options.js"></script>
 </body>
 ```
+
+## リリース手順
+### バージョンを更新
+[Semantic Versioning](https://semver.org/lang/ja/)にしたがって、パッケージのバージョンを更新します。
+
+- メジャー
+
+```sh
+$ npm run release:major
+```
+
+- マイナー
+
+```sh
+$ npm run release:minor
+```
+
+- パッチ
+
+```sh
+$ npm run release:patch
+```
+
+このとき、`package-lock.json`のバージョンは更新されないので、手動で更新します。
+
+### パッケージをビルド
+```sh
+$ npm run build
+$ zip -r dist/chrome.zip dist/chrome
+```
+
+### Developer Dashboardからリリース
+[Developer Dashboard](https://chrome.google.com/webstore/devconsole/)から、新しいパッケージをアップロードします。  
+機能の更新がある場合は、詳細説明やスクリーンショットも更新します。
