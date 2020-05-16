@@ -1,8 +1,10 @@
 import Vue from 'vue'
-import Storage from './Storage'
+import {
+  createObjectFromEntries,
+  Storage
+} from './modules'
 import fetchConfig from './fetchConfig'
 import actions from './actions'
-import { createObjectFromEntries } from './modules'
 import { AppCheckbox } from './components'
 
 document.addEventListener('DOMContentLoaded', () => {

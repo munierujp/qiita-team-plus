@@ -1,4 +1,4 @@
-import Storage from './Storage'
+import { Storage } from './modules'
 import defaultConfig from './defaultConfig'
 
 function fetchConfig () {
