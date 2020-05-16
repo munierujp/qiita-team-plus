@@ -1,4 +1,4 @@
-import newDate from '../../../modules/newDate'
+import { newDate } from '../../../modules'
 
 class ArticleElement {
   constructor (element) {
