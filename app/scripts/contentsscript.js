@@ -1,4 +1,4 @@
-import isTeamPage from './isTeamPage'
+import { isTeamPage } from './modules'
 import run from './run'
 
 if (isTeamPage(document)) {
