@@ -1,6 +1,12 @@
 import { isTeamPage } from './modules'
-import run from './run'
+import * as actions from './actions'
+import fetchConfig from './fetchConfig'
 
 if (isTeamPage(document)) {
-  run().catch(e => console.error(e))
+  fetchConfig().then(config => {
+    Object.values(actions)
+      .filter(({ routes }) => routes.some(route => window.location.pathname.match(route)))
+      .filter(({ key }) => config[key])
+      .forEach(({ run }) => run(config))
+  })
 }
