@@ -1,4 +1,4 @@
-import createObjectFromEntries from './createObjectFromEntries'
+import createObjectFromEntries from './create-object-from-entries'
 import newDate from './newDate'
 
 export {
