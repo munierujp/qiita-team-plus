@@ -12,6 +12,10 @@ export default {
     paths.article
   ],
   run: () => {
+    if (document.location.hash.match(/^#comment-/)) {
+      return
+    }
+
     const page = new ArticlePage(document)
     const commentList = page.getCommentListElement()
     const comments = commentList.getCommentElements()
