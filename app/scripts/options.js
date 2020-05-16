@@ -4,7 +4,7 @@ import {
   Storage
 } from './modules'
 import fetchConfig from './fetchConfig'
-import actions from './actions'
+import * as actions from './actions'
 import { AppCheckbox } from './components'
 
 document.addEventListener('DOMContentLoaded', () => {
