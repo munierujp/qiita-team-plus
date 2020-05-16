@@ -3,7 +3,7 @@ import Storage from './Storage'
 import fetchConfig from './fetchConfig'
 import actions from './actions'
 import createObjectFromEntries from './modules/createObjectFromEntries'
-import AppCheckbox from './components/AppCheckbox'
+import { AppCheckbox } from './components'
 
 document.addEventListener('DOMContentLoaded', () => {
   fetchConfig().then(config => {
