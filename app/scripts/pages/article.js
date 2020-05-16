@@ -1,6 +1,9 @@
-import { ArticleElement, CommentListElement } from './elements'
+import {
+  ArticleElement,
+  CommentListElement
+} from './elements'
 
-class ArticlePage {
+export default class {
   constructor (document) {
     this.document = document
   }
@@ -15,5 +18,3 @@ class ArticlePage {
     return new CommentListElement(element)
   }
 }
-
-export default ArticlePage

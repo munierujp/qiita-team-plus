@@ -32,7 +32,7 @@
 ページはdocumentのラッパークラスで、エレメントを取得するための関数を持っています。
 
 ```js
-class CommonPage {
+class {
   constructor (document) {
     this.document = document
   }
@@ -49,7 +49,7 @@ class CommonPage {
 エレメントはHTMLElementのラッパークラスで、DOM操作のための関数を持っています。
 
 ```js
-class HeaderElement {
+class {
   constructor (element) {
     this.element = element
   }
@@ -78,12 +78,12 @@ export default {
 ### ページを追加
 アクションを実行するページが`app/scripts/pages/`ディレクトリに存在しなければ、追加します。
 
-`app/scripts/pages/common/index.js`:
+`app/scripts/pages/common.js`:
 
 ```js
 import { HeaderElement } from './elements'
 
-class CommonPage {
+export default class {
   constructor (document) {
     this.document = document
   }
@@ -93,8 +93,6 @@ class CommonPage {
     return new HeaderElement(element)
   }
 }
-
-export default CommonPage
 ```
 
 ページを追加したら、`app/scripts/pages/index.js`ファイルにも追加します。

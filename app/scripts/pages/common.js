@@ -1,6 +1,6 @@
 import { HeaderElement } from './elements'
 
-class CommonPage {
+export default class {
   constructor (document) {
     this.document = document
   }
@@ -20,5 +20,3 @@ class CommonPage {
     return new HeaderElement(element)
   }
 }
-
-export default CommonPage

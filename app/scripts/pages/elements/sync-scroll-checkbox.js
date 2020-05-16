@@ -1,4 +1,4 @@
-class SyncScrollCheckboxElement {
+export default class {
   constructor (element) {
     this.element = element
   }
@@ -11,5 +11,3 @@ class SyncScrollCheckboxElement {
     return this.element.click()
   }
 }
-
-export default SyncScrollCheckboxElement
