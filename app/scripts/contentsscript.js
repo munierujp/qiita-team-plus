@@ -1,6 +1,8 @@
-import { isTeamPage } from './modules'
+import {
+  fetchConfig,
+  isTeamPage
+} from './modules'
 import * as actions from './actions'
-import fetchConfig from './fetchConfig'
 
 if (isTeamPage(document)) {
   fetchConfig().then(config => {

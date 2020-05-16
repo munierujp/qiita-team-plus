@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import {
   createObjectFromEntries,
+  fetchConfig,
   Storage
 } from './modules'
-import fetchConfig from './fetchConfig'
 import * as actions from './actions'
 import { AppCheckbox } from './components'
 
