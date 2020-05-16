@@ -4,7 +4,7 @@ import autoEnableSyncScroll from './auto-enable-sync-scroll'
 import fixHeader from './fix-header'
 import foldableComments from './foldable-comments'
 
-export default {
+export {
   addOldArticleAlert,
   addStockButtonToHeader,
   autoEnableSyncScroll,

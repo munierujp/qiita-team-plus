@@ -139,7 +139,7 @@ export default {
 ```js
 import fixHeader from './fix-header'
 
-export default {
+export {
   fixHeader
 }
 ```
