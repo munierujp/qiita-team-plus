@@ -64,10 +64,10 @@ class {
 ここでは、すべてのページに対してヘッダーを固定する機能を追加する場合の例を示します。
 
 ### パスを追加
-アクションを実行するパスが`app/scripts/paths.js`ファイルに定義されていなければ、追加します。  
+アクションを実行するパスが`app/scripts/modules/paths.json`ファイルに定義されていなければ、追加します。  
 パスは正規表現形式で、文字列または正規表現リテラルによって定義します。
 
-`app/scripts/paths.js`:
+`app/scripts/modules/paths.json`:
 
 ```js
 export default {
@@ -113,7 +113,7 @@ export {
 `app/scripts/actions/fix-header.js`:
 
 ```js
-import paths from '../paths'
+import { paths } from '../modules'
 import { CommonPage } from '../pages'
 
 export default {

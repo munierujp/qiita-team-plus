@@ -1,4 +1,4 @@
-import paths from '../paths'
+import { paths } from '../modules'
 import { EditArticlePage } from '../pages'
 
 export default {

@@ -1,4 +1,4 @@
-import paths from '../paths'
+import { paths } from '../modules'
 import { CommonPage } from '../pages'
 
 export default {

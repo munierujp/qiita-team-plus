@@ -1,4 +1,4 @@
-import paths from '../paths'
+import { paths } from '../modules'
 import { ArticlePage } from '../pages'
 import { differenceInYears } from 'date-fns'
 
