@@ -1,9 +1,11 @@
 import Vue from 'vue'
-import Storage from './Storage'
-import fetchConfig from './fetchConfig'
-import actions from './actions'
-import createObjectFromEntries from './modules/createObjectFromEntries'
-import AppCheckbox from './components/AppCheckbox'
+import {
+  createObjectFromEntries,
+  fetchConfig,
+  Storage
+} from './modules'
+import * as actions from './actions'
+import { AppCheckbox } from './components'
 
 document.addEventListener('DOMContentLoaded', () => {
   fetchConfig().then(config => {

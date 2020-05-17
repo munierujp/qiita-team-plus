@@ -1,4 +1,4 @@
-class HeaderElement {
+export default class {
   constructor (element) {
     this.element = element
   }
@@ -11,5 +11,3 @@ class HeaderElement {
     return this.element.querySelector(selector)
   }
 }
-
-export default HeaderElement

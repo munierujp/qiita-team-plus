@@ -1,6 +1,6 @@
 import { CommentElement } from '.'
 
-class CommentListElement {
+export default class {
   constructor (element) {
     this.element = element
   }
@@ -23,5 +23,3 @@ class CommentListElement {
     this.element.prepend(node)
   }
 }
-
-export default CommentListElement

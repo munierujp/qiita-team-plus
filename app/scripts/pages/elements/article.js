@@ -1,6 +1,6 @@
-import newDate from '../../../modules/newDate'
+import { newDate } from '../../modules'
 
-class ArticleElement {
+export default class {
   constructor (element) {
     this.element = element
   }
@@ -33,5 +33,3 @@ class ArticleElement {
     return this.element.insertBefore(node, body)
   }
 }
-
-export default ArticleElement

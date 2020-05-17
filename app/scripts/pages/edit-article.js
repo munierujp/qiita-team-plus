@@ -1,6 +1,6 @@
 import { SyncScrollCheckboxElement } from './elements'
 
-class EditArticlePage {
+export default class {
   constructor (document) {
     this.document = document
   }
@@ -10,5 +10,3 @@ class EditArticlePage {
     return new SyncScrollCheckboxElement(element)
   }
 }
-
-export default EditArticlePage

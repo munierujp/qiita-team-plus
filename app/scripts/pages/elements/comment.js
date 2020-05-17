@@ -1,4 +1,4 @@
-class CommentElement {
+export default class {
   constructor (element) {
     this.element = element
   }
@@ -7,5 +7,3 @@ class CommentElement {
     return this.element.classList
   }
 }
-
-export default CommentElement

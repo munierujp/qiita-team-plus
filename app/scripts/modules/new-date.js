@@ -1,4 +1,4 @@
-function newDate ({ year, month, day, hour, minute, second, millisecond }) {
+export default function ({ year, month, day, hour, minute, second, millisecond }) {
   const args = [ year ]
 
   // NOTE: month value is zero-based
@@ -40,5 +40,3 @@ function newDate ({ year, month, day, hour, minute, second, millisecond }) {
 
   return new Date(...args)
 }
-
-export default newDate

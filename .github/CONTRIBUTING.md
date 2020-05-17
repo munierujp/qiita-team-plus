@@ -32,7 +32,7 @@
 ページはdocumentのラッパークラスで、エレメントを取得するための関数を持っています。
 
 ```js
-class CommonPage {
+class {
   constructor (document) {
     this.document = document
   }
@@ -49,7 +49,7 @@ class CommonPage {
 エレメントはHTMLElementのラッパークラスで、DOM操作のための関数を持っています。
 
 ```js
-class HeaderElement {
+class {
   constructor (element) {
     this.element = element
   }
@@ -64,26 +64,27 @@ class HeaderElement {
 ここでは、すべてのページに対してヘッダーを固定する機能を追加する場合の例を示します。
 
 ### パスを追加
-アクションを実行するパスが`app/scripts/paths.js`ファイルに定義されていなければ、追加します。  
-パスは正規表現形式で、文字列または正規表現リテラルによって定義します。
+アクションを実行するパスが`app/scripts/modules/paths.json`ファイルに定義されていなければ、追加します。  
+パスは正規表現形式で定義します。
 
-`app/scripts/paths.js`:
+`app/scripts/modules/paths.json`:
 
-```js
-export default {
-  all: '^.*$'
+```json
+{
+  "all": "^.*$"
 }
+
 ```
 
 ### ページを追加
-アクションを実行するページが`app/scripts/pages/`ディレクトリに存在しなければ、追加します。
+アクションを実行するページが`app/scripts/pages`ディレクトリに存在しなければ、追加します。
 
-`app/scripts/pages/common/index.js`:
+`app/scripts/pages/common.js`:
 
 ```js
 import { HeaderElement } from './elements'
 
-class CommonPage {
+export default class {
   constructor (document) {
     this.document = document
   }
@@ -93,8 +94,6 @@ class CommonPage {
     return new HeaderElement(element)
   }
 }
-
-export default CommonPage
 ```
 
 ページを追加したら、`app/scripts/pages/index.js`ファイルにも追加します。
@@ -102,11 +101,7 @@ export default CommonPage
 `app/scripts/pages/index.js`:
 
 ```js
-import CommonPage from './common'
-
-export {
-  CommonPage
-}
+export { default as CommonPage } from './common'
 ```
 
 ### アクションを追加
@@ -115,7 +110,7 @@ export {
 `app/scripts/actions/fix-header.js`:
 
 ```js
-import paths from '../paths'
+import { paths } from '../modules'
 import { CommonPage } from '../pages'
 
 export default {
@@ -137,11 +132,7 @@ export default {
 `app/scripts/actions/index.js`:
 
 ```js
-import fixHeader from './fix-header'
-
-export default {
-  fixHeader
-}
+export { default as fixHeader } from './fix-header'
 ```
 
 #### 設定
@@ -159,7 +150,7 @@ DOM操作は直接記述してもかまいませんが、定義済みのペー�
 
 #### スタイル
 スタイルは、`app/styles/contentsscript.css`ファイルに記述します。  
-アクション内でスタイルを適用したい要素に`data-qiita-team-plus-{アクションのキーのケバブケース}`という属性をつけ、CSSのセレクタで使用します。
+アクション内でスタイルを適用したい要素に`data-qiita-team-plus-<アクションのキーのケバブケース>`という属性をつけ、CSSのセレクタで使用します。
 
 ```css
 [data-qiita-team-plus-fix-header="header"] {
@@ -170,7 +161,7 @@ DOM操作は直接記述してもかまいませんが、定義済みのペー�
 ```
 
 ### 設定を更新
-`app/scripts/defaultConfig.json`ファイルに、アクションのキーを追加します。
+`app/scripts/modules/default-config.json`ファイルに、アクションのキーを追加します。
 
 ```json
 {
