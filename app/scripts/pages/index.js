@@ -1,9 +1,3 @@
-import CommonPage from './common'
-import ArticlePage from './article'
-import EditArticlePage from './edit-article'
-
-export {
-  CommonPage,
-  ArticlePage,
-  EditArticlePage
-}
+export { default as ArticlePage } from './article'
+export { default as CommonPage } from './common'
+export { default as EditArticlePage } from './edit-article'
