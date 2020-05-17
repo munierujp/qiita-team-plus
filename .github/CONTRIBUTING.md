@@ -77,7 +77,7 @@ class {
 ```
 
 ### ページを追加
-アクションを実行するページが`app/scripts/pages/`ディレクトリに存在しなければ、追加します。
+アクションを実行するページが`app/scripts/pages`ディレクトリに存在しなければ、追加します。
 
 `app/scripts/pages/common.js`:
 
