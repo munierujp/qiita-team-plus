@@ -150,7 +150,7 @@ DOM操作は直接記述してもかまいませんが、定義済みのペー�
 
 #### スタイル
 スタイルは、`app/styles/contentsscript.css`ファイルに記述します。  
-アクション内でスタイルを適用したい要素に`data-qiita-team-plus-{アクションのキーのケバブケース}`という属性をつけ、CSSのセレクタで使用します。
+アクション内でスタイルを適用したい要素に`data-qiita-team-plus-<アクションのキーのケバブケース>`という属性をつけ、CSSのセレクタで使用します。
 
 ```css
 [data-qiita-team-plus-fix-header="header"] {
