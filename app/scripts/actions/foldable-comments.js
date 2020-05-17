@@ -12,23 +12,23 @@ export default {
     paths.article
   ],
   run: () => {
-    if (document.location.hash.match(/^#comment-/)) {
-      return
-    }
-
+    const shouldCloseByDefault = !document.location.hash.match(/^#comment-/)
     const page = new ArticlePage(document)
     const commentList = page.getCommentListElement()
     const comments = commentList.getCommentElements()
-    comments.forEach(comment => comment.classList.add(CLASS_HIDE))
-    const toggle = createToggleElement({ comments })
+    if (shouldCloseByDefault) {
+      comments.forEach(comment => comment.classList.add(CLASS_HIDE))
+    }
+    const toggle = createToggleElement({ comments, shouldCloseByDefault })
     commentList.prepend(toggle)
   }
 }
 
-function createToggleElement ({ comments }) {
+function createToggleElement ({ comments, shouldCloseByDefault }) {
   const icon = document.createElement('i')
   addSelector(icon, 'comment-icon')
-  icon.setAttribute('class', `fa fa-lg ${CLASS_CLOSED}`)
+  const DEFAULT_CLASS = shouldCloseByDefault ? CLASS_CLOSED : CLASS_OPEND
+  icon.setAttribute('class', `fa fa-lg ${DEFAULT_CLASS}`)
 
   const label = document.createElement('span')
   addSelector(label, 'comment-label')
