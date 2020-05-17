@@ -1,5 +1,1 @@
-import AppCheckbox from './AppCheckbox'
-
-export {
-  AppCheckbox
-}
+export { default as AppCheckbox } from './AppCheckbox'
