@@ -1,5 +1,7 @@
-import { Storage } from './'
-import defaultConfig from '../defaultConfig'
+import {
+  defaultConfig,
+  Storage
+} from './'
 
 export default function () {
   return Storage.fetch(defaultConfig)

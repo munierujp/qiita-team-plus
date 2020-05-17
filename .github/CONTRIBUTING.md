@@ -161,7 +161,7 @@ DOM操作は直接記述してもかまいませんが、定義済みのペー�
 ```
 
 ### 設定を更新
-`app/scripts/defaultConfig.json`ファイルに、アクションのキーを追加します。
+`app/scripts/modules/default-config.json`ファイルに、アクションのキーを追加します。
 
 ```json
 {
