@@ -65,7 +65,7 @@ class {
 
 ### パスを追加
 アクションを実行するパスが`app/scripts/modules/paths.json`ファイルに定義されていなければ、追加します。  
-パスは正規表現形式で、文字列または正規表現リテラルによって定義します。
+パスは正規表現形式で定義します。
 
 `app/scripts/modules/paths.json`:
 
