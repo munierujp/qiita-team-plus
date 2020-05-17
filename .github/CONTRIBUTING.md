@@ -69,10 +69,11 @@ class {
 
 `app/scripts/modules/paths.json`:
 
-```js
-export default {
-  all: '^.*$'
+```json
+{
+  "all": "^.*$"
 }
+
 ```
 
 ### ページを追加
@@ -100,11 +101,7 @@ export default class {
 `app/scripts/pages/index.js`:
 
 ```js
-import CommonPage from './common'
-
-export {
-  CommonPage
-}
+export { default as CommonPage } from './common'
 ```
 
 ### アクションを追加
@@ -135,11 +132,7 @@ export default {
 `app/scripts/actions/index.js`:
 
 ```js
-import fixHeader from './fix-header'
-
-export {
-  fixHeader
-}
+export { default as fixHeader } from './fix-header'
 ```
 
 #### 設定
