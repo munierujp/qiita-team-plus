@@ -56,7 +56,7 @@
     "gulp-imagemin": "3.4.0",
     "gulp-json-transform": "0.4.6",
     "gulp-less": "3.5.0",
-    "gulp-livereload": "3.8.1",
+    "gulp-livereload": "4.0.2",
     "gulp-plumber": "1.2.1",
     "gulp-sass": "3.2.1",
     "gulp-sequence": "0.4.6",
