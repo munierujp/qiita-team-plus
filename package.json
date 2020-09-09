@@ -53,7 +53,7 @@
     "gulp-filter": "5.1.0",
     "gulp-git": "2.9.0",
     "gulp-if": "2.0.2",
-    "gulp-imagemin": "3.4.0",
+    "gulp-imagemin": "7.1.0",
     "gulp-json-transform": "0.4.6",
     "gulp-less": "3.5.0",
     "gulp-livereload": "3.8.1",
