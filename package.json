@@ -54,7 +54,7 @@
     "gulp-git": "2.10.1",
     "gulp-if": "2.0.2",
     "gulp-imagemin": "3.4.0",
-    "gulp-json-transform": "0.4.6",
+    "gulp-json-transform": "0.4.7",
     "gulp-less": "3.5.0",
     "gulp-livereload": "3.8.1",
     "gulp-plumber": "1.2.1",
