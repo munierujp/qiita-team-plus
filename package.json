@@ -37,7 +37,7 @@
     "babel-preset-env": "1.7.0",
     "chai": "4.3.4",
     "chromereload": "0.0.2",
-    "date-fns": "2.19.0",
+    "date-fns": "2.21.3",
     "debounce": "1.2.1",
     "del": "3.0.0",
     "eslint": "5.16.0",
